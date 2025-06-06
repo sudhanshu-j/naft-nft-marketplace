@@ -8,7 +8,7 @@ This project is a front-end UI prototype, meticulously crafted using **HTML**, *
 ## 🔗 Live Preview
 
 🎯 **Experience NAFT in action:**  
-👉 [Live Demo](#) _(Replace with deployed URL)_
+👉 [Live Demo](https://naft-nftmarketplace.netlify.app/)
 
 ---
 
