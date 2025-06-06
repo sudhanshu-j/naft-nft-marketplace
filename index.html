@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<!-- Declares the document type and version of HTML -->
+<html lang="en">
+  <!-- Root element of the document with language set to English -->
+
+  <head>
+    <!-- Head section containing metadata and links to resources -->
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ensures compatibility with IE's latest rendering engine -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the page responsive on all devices -->
+
+    <title>NAFT - NFT Markeplace</title>
+    <!-- Title displayed on the browser tab -->
+
+    <!-- Favicon icon for the website -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+    <!-- Link to custom stylesheet for styling the page -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Preconnect to Google's font servers to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts: Roboto font with weights 400, 500, and 700 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Scroll Reveal CDN -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+
+  <body id="top">
+    <!-- Body of the document, with an ID 'top' for anchor linking -->
+
+    <!-- ========== HEADER SECTION ========== -->
+    <header>
+      <div class="container">
+        <!-- Container for layout consistency -->
+
+        <!-- Website Logo -->
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.png" alt="NAFT logo" />
+        </a>
+
+        <div class="header-right">
+          <!-- Wrapper for navigation and actions -->
+
+          <div class="header-nav-wrapper">
+            <!-- Navigation toggle and menu wrapper -->
+
+            <!-- Toggle button for mobile navbar -->
+            <button class="navbar-toggle-btn" data-navbar-toggle-btn>
+              <ion-icon name="menu-outline"></ion-icon>
+              <!-- Menu icon from Ionicons -->
+            </button>
+
+            <!-- Navigation menu -->
+            <nav class="navbar" data-navbar>
+              <ul class="navbar-list">
+                <!-- List of navigation links -->
+                <li>
+                  <a href="#" class="navbar-link">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="navbar-link">About</a>
+                </li>
+                <li>
+                  <a href="#" class="navbar-link">Explore</a>
+                </li>
+                <li>
+                  <a href="#" class="navbar-link">Creators</a>
+                </li>
+                <li>
+                  <a href="#" class="navbar-link">Collections</a>
+                </li>
+                <li>
+                  <a href="#" class="navbar-link">Blog</a>
+                </li>
+                <li>
+                  <a href="#" class="navbar-link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Search bar and Sign-in button -->
+          <div class="header-actions">
+            <input type="search" placeholder="Search" class="search-field" />
+            <!-- Search input -->
+
+            <button class="btn btn-primary">Sign in</button>
+            <!-- Primary button for sign-in -->
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Main content section starts -->
+      <article>
+        <!-- Article wrapper for structured content -->
+
+        <!-- ========== HERO SECTION ========== -->
+        <section class="hero">
+          <!-- Hero section for the main introductory content -->
+          <div class="container">
+            <!-- Container for layout alignment -->
+
+            <div class="hero-content">
+              <!-- Text content of the hero section -->
+
+              <!-- Main heading with highlighted span -->
+              <h1 class="h1 hero-title">
+                Discover digital art sell your specific <span>NFT</span>
+              </h1>
+
+              <!-- Supporting paragraph text -->
+              <p class="hero-text">
+                Partner with one of the world’s largest retailers to showcase
+                your brand and products.
+              </p>
+
+              <!-- Call-to-action buttons -->
+              <div class="btn-group">
+                <button class="btn btn-primary">Explore more</button>
+                <button class="btn btn-secondary">Create now</button>
+              </div>
+            </div>
+
+            <!-- Hero image/banner -->
+            <figure class="hero-banner">
+              <img src="./assets/images/hero-banner.jpg" alt="nft art" />
+            </figure>
+          </div>
+        </section>
+
+        <!-- ========== NEW PRODUCT SECTION ========== -->
+        <section class="new-product">
+          <!-- Section for newest NFTs -->
+          <div class="container">
+            <!-- Container for layout consistency -->
+
+            <!-- Section title and "View All" button -->
+            <div class="section-header-wrapper">
+              <h2 class="h2 section-title">Newest Items</h2>
+              <button class="btn btn-primary">View all</button>
+            </div>
+
+            <!-- List of product cards -->
+            <ul class="product-list">
+              <!-- ========== PRODUCT CARD 1 ========== -->
+              <li class="product-item">
+                <!-- Individual product item -->
+                <div class="product-card" tabindex="0">
+                  <!-- Card wrapper with keyboard focus -->
+
+                  <!-- Product image/banner -->
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/new-item-1.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+
+                    <!-- Overlay action buttons -->
+                    <div class="product-actions">
+                      <!-- Menu icon (e.g., options/settings) -->
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+
+                      <!-- Wishlist/like button -->
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+
+                    <!-- Call-to-action: place a bid -->
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <!-- Product content -->
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title">
+                      Dimond riding a blue body art
+                    </a>
+
+                    <!-- Meta info: author and bid -->
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+
+                      <!-- Current bid price -->
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+
+                    <!-- Footer with bid count and tag -->
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+                      <button class="tag">New</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- ========== PRODUCT CARD 2 ========== -->
+              <li class="product-item">
+                <div class="product-card" tabindex="0">
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/new-item-2.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+                    <div class="product-actions">
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title">
+                      Dimond riding a blue body art
+                    </a>
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+                      <button class="tag">New</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- ========== PRODUCT CARD 3 ========== -->
+              <li class="product-item">
+                <div class="product-card" tabindex="0">
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/new-item-3.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+                    <div class="product-actions">
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title">
+                      Dimond riding a blue body art
+                    </a>
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+                      <button class="tag">New</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- ========== PRODUCT CARD 4 ========== -->
+              <li class="product-item">
+                <div class="product-card" tabindex="0">
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/new-item-4.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+                    <div class="product-actions">
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title">
+                      Dimond riding a blue body art
+                    </a>
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+                      <button class="tag">New</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- ========== END PRODUCT LIST ========== -->
+            </ul>
+          </div>
+        </section>
+
+        <!-- ========== ABOUT SECTION ========== -->
+        <section class="about">
+          <!-- About section for explaining NFT creation steps -->
+          <div class="container">
+            <!-- Layout container to center and constrain width -->
+
+            <!-- Section heading -->
+            <h2 class="h2 about-title">Create and sell your NFTs</h2>
+
+            <!-- Ordered list of steps -->
+            <ol class="about-list">
+              <!-- ====== STEP 1 ====== -->
+              <li class="about-item">
+                <!-- Individual step item -->
+                <div class="about-card">
+                  <!-- Card layout for the step -->
+
+                  <div class="card-number">01</div>
+                  <!-- Step number -->
+
+                  <!-- Icon for the step -->
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/single-create-sell-item-1.png"
+                      alt="wallet icon"
+                    />
+                  </div>
+
+                  <!-- Step title -->
+                  <h3 class="h3 about-card-title">Set up Your Wallet</h3>
+
+                  <!-- Description text -->
+                  <p class="about-card-text">
+                    There are many variations of passagi Ipsum available but the
+                    majorty have eration in some form, by injected
+                  </p>
+                </div>
+              </li>
+
+              <!-- ====== STEP 2 ====== -->
+              <li class="about-item">
+                <div class="about-card">
+                  <div class="card-number">02</div>
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/single-create-sell-item-2.png"
+                      alt="collection icon"
+                    />
+                  </div>
+                  <h3 class="h3 about-card-title">Create Your Collection</h3>
+                  <p class="about-card-text">
+                    There are many variations of passagi Ipsum available but the
+                    majorty have eration in some form, by injected
+                  </p>
+                </div>
+              </li>
+
+              <!-- ====== STEP 3 ====== -->
+              <li class="about-item">
+                <div class="about-card">
+                  <div class="card-number">03</div>
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/single-create-sell-item-3.png"
+                      alt="folder icon"
+                    />
+                  </div>
+                  <h3 class="h3 about-card-title">Add Your NFT's</h3>
+                  <p class="about-card-text">
+                    There are many variations of passagi Ipsum available but the
+                    majorty have eration in some form, by injected
+                  </p>
+                </div>
+              </li>
+
+              <!-- ====== STEP 4 ====== -->
+              <li class="about-item">
+                <div class="about-card">
+                  <div class="card-number">04</div>
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/single-create-sell-item-4.png"
+                      alt="diamond icon"
+                    />
+                  </div>
+                  <h3 class="h3 about-card-title">Sell Your NFT's</h3>
+                  <p class="about-card-text">
+                    There are many variations of passagi Ipsum available but the
+                    majorty have eration in some form, by injected
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- ========== EXPLORE PRODUCT SECTION ========== -->
+        <section class="explore-product">
+          <!-- Start of the Explore Product section -->
+          <div class="container">
+            <!-- Container for layout consistency -->
+
+            <!-- Section header with title and explore button -->
+            <div class="section-header-wrapper">
+              <h2 class="h2 section-title">Explore Product</h2>
+              <!-- Section heading -->
+              <button class="btn btn-primary">Explore</button>
+              <!-- Call-to-action button -->
+            </div>
+
+            <!-- Product list grid -->
+            <ul class="product-list">
+              <li class="product-item product-item-1">
+                <!-- Single product list item -->
+                <div class="product-card" tabindex="0">
+                  <!-- Entire clickable card (focusable for accessibility) -->
+
+                  <!-- Product image and interactive buttons -->
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/explore-product-1.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+
+                    <!-- Action buttons overlay -->
+                    <div class="product-actions">
+                      <!-- Menu (ellipsis) button -->
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+
+                      <!-- Wishlist (heart) button -->
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+
+                    <!-- Main action: Place bid -->
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <!-- Product description area -->
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title"
+                      >Dimond riding a blue body art</a
+                    >
+
+                    <!-- Author & price metadata -->
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+
+                      <!-- Current bid display -->
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+
+                    <!-- Footer info: bids and tag -->
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+                      <button class="tag">New</button>
+                      <!-- "New" label/tag -->
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="product-item product-item-2">
+                <div class="product-card" tabindex="0">
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/explore-product-2.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+
+                    <div class="product-actions">
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title"
+                      >Dimond riding a blue body art</a
+                    >
+
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+
+                      <button class="tag">New</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="product-item product-item-3">
+                <div class="product-card" tabindex="0">
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/explore-product-3.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+
+                    <div class="product-actions">
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title"
+                      >Dimond riding a blue body art</a
+                    >
+
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+
+                      <button class="tag">New</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="product-item product-item-4">
+                <div class="product-card" tabindex="0">
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/explore-product-4.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+
+                    <div class="product-actions">
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title"
+                      >Dimond riding a blue body art</a
+                    >
+
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+
+                      <button class="tag">New</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="product-item product-item-5">
+                <div class="product-card" tabindex="0">
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/explore-product-5.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+
+                    <div class="product-actions">
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title"
+                      >Dimond riding a blue body art</a
+                    >
+
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+
+                      <button class="tag">New</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="product-item product-item-6">
+                <div class="product-card" tabindex="0">
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/explore-product-6.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+
+                    <div class="product-actions">
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title"
+                      >Dimond riding a blue body art</a
+                    >
+
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+
+                      <button class="tag">New</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="product-item product-item-7">
+                <div class="product-card" tabindex="0">
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/explore-product-7.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+
+                    <div class="product-actions">
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title"
+                      >Dimond riding a blue body art</a
+                    >
+
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+
+                      <button class="tag">New</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="product-item product-item-8">
+                <div class="product-card" tabindex="0">
+                  <figure class="product-banner">
+                    <img
+                      src="./assets/images/explore-product-8.jpg"
+                      alt="Dimond riding a blue body art"
+                    />
+
+                    <div class="product-actions">
+                      <button class="product-card-menu">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                      </button>
+
+                      <button class="add-to-whishlist" data-whishlist-btn>
+                        <ion-icon name="heart"></ion-icon>
+                      </button>
+                    </div>
+
+                    <button class="place-bid-btn">Place bid</button>
+                  </figure>
+
+                  <div class="product-content">
+                    <a href="#" class="h4 product-title"
+                      >Dimond riding a blue body art</a
+                    >
+
+                    <div class="product-meta">
+                      <div class="product-author">
+                        <figure class="author-img">
+                          <img
+                            src="./assets/images/bidding-user.png"
+                            alt="Jack Reacher"
+                          />
+                        </figure>
+
+                        <div class="author-content">
+                          <h4 class="h5 author-title">Jack R</h4>
+
+                          <a href="#" class="author-username">@jackr</a>
+                        </div>
+                      </div>
+
+                      <div class="product-price">
+                        <data value="0.568">0.568ETH</data>
+
+                        <p class="label">Current Bid</p>
+                      </div>
+                    </div>
+
+                    <div class="product-footer">
+                      <p class="total-bid">12+ Place Bid.</p>
+
+                      <button class="tag">New</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ========== TOP SELLER SECTION ========== -->
+        <section class="top-seller">
+          <div class="container">
+            <!-- Title with a dropdown-style icon -->
+            <h2 class="h2 top-seller-title">
+              Top seller in <span>1</span> day
+              <ion-icon name="chevron-down"></ion-icon>
+            </h2>
+
+            <!-- Ordered list of sellers -->
+            <ol class="top-seller-list">
+              <li class="top-seller-item top-seller-item-1">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">01</div>
+                  <!-- Rank number -->
+
+                  <figure class="card-avatar">
+                    <img src="./assets/images/seller-01.png" alt="Brodband" />
+                    <!-- Optional verified badge -->
+                    <div class="avatar-badge">
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">Brodband</h3>
+                    <data value="2500000">$2500,000</data>
+                    <!-- Sales or earnings -->
+                  </div>
+                </a>
+              </li>
+
+              <li class="top-seller-item top-seller-item-2">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">02</div>
+
+                  <figure class="card-avatar">
+                    <img src="./assets/images/seller-02.png" alt="Alexander" />
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">Alexander</h3>
+
+                    <data value="2500000">$2500,000</data>
+                  </div>
+                </a>
+              </li>
+
+              <li class="top-seller-item top-seller-item-3">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">03</div>
+
+                  <figure class="card-avatar">
+                    <img
+                      src="./assets/images/seller-03.png"
+                      alt="William Jeck"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">William Jeck</h3>
+
+                    <data value="2500000">$2500,000</data>
+                  </div>
+                </a>
+              </li>
+
+              <li class="top-seller-item top-seller-item-4">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">04</div>
+
+                  <figure class="card-avatar">
+                    <img src="./assets/images/seller-04.png" alt="Henry Jhon" />
+
+                    <div class="avatar-badge">
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">Henry Jhon</h3>
+
+                    <data value="2500000">$2500,000</data>
+                  </div>
+                </a>
+              </li>
+
+              <li class="top-seller-item top-seller-item-5">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">05</div>
+
+                  <figure class="card-avatar">
+                    <img
+                      src="./assets/images/seller-05.png"
+                      alt="James Thomas"
+                    />
+
+                    <div class="avatar-badge">
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">James Thomas</h3>
+
+                    <data value="2500000">$2500,000</data>
+                  </div>
+                </a>
+              </li>
+
+              <li class="top-seller-item top-seller-item-6">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">06</div>
+
+                  <figure class="card-avatar">
+                    <img
+                      src="./assets/images/seller-06.png"
+                      alt="Anthony Roy"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">Anthony Roy</h3>
+
+                    <data value="2500000">$2500,000</data>
+                  </div>
+                </a>
+              </li>
+
+              <li class="top-seller-item top-seller-item-7">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">07</div>
+
+                  <figure class="card-avatar">
+                    <img src="./assets/images/seller-07.png" alt="Chritopher" />
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">Chritopher</h3>
+
+                    <data value="2500000">$2500,000</data>
+                  </div>
+                </a>
+              </li>
+
+              <li class="top-seller-item top-seller-item-8">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">08</div>
+
+                  <figure class="card-avatar">
+                    <img
+                      src="./assets/images/seller-08.png"
+                      alt="Elijabeth Ran"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">Elijabeth Ran</h3>
+
+                    <data value="2500000">$2500,000</data>
+                  </div>
+                </a>
+              </li>
+
+              <li class="top-seller-item top-seller-item-9">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">09</div>
+
+                  <figure class="card-avatar">
+                    <img
+                      src="./assets/images/seller-01.png"
+                      alt="Brodband HR"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">Brodband HR</h3>
+
+                    <data value="2500000">$2500,000</data>
+                  </div>
+                </a>
+              </li>
+
+              <li class="top-seller-item top-seller-item-10">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">10</div>
+
+                  <figure class="card-avatar">
+                    <img src="./assets/images/seller-02.png" alt="Michel Raw" />
+
+                    <div class="avatar-badge">
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">Michel Raw</h3>
+
+                    <data value="2500000">$2500,000</data>
+                  </div>
+                </a>
+              </li>
+
+              <li class="top-seller-item top-seller-item-11">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">11</div>
+
+                  <figure class="card-avatar">
+                    <img src="./assets/images/seller-03.png" alt="Liam Dylan" />
+
+                    <div class="avatar-badge">
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">Liam Dylan</h3>
+
+                    <data value="2500000">$2500,000</data>
+                  </div>
+                </a>
+              </li>
+
+              <li class="top-seller-item top-seller-item-12">
+                <a href="#" class="top-seller-card">
+                  <div class="card-number">12</div>
+
+                  <figure class="card-avatar">
+                    <img src="./assets/images/seller-04.png" alt="Thomas Jar" />
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h5 card-title">Thomas Jar</h3>
+
+                    <data value="2500000">$2500,000</data>
+                  </div>
+                </a>
+              </li>
+            </ol>
+            <!-- End of top-seller-list -->
+          </div>
+          <!-- End of container -->
+        </section>
+        <!-- End of top-seller -->
+      </article>
+    </main>
+
+    <!-- ========== FOOTER SECTION ========== -->
+    <footer>
+      <!-- Top section of the footer -->
+      <div class="footer-top">
+        <div class="container">
+          <!-- Brand/logo and about text -->
+          <div class="footer-brand">
+            <!-- Logo image link -->
+            <a href="#" class="logo">
+              <img src="./assets/images/logo.png" alt="NAFT logo" />
+            </a>
+
+            <!-- Brand description paragraph -->
+            <p class="footer-brand-text">
+              There are many variations of passages, but most have been altered
+              — either by injected humour or by random words that are barely
+              believable.
+            </p>
+
+            <!-- Community heading -->
+            <h3 class="h4 social-title">Join the community</h3>
+
+            <!-- Social media icons list -->
+            <ul class="social-list">
+              <li>
+                <!-- GitHub icon with link -->
+                <a href="https://github.com/" class="social-link">
+                  <ion-icon name="logo-github"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <!-- Twitter icon with link -->
+                <a href="https://twitter.com/" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <!-- Instagram icon with link -->
+                <a href="https://www.instagram.com/" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <!-- YouTube icon with link -->
+                <a href="https://www.youtube.com/" class="social-link">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Footer links container -->
+          <div class="footer-link-box">
+            <!-- Marketplace links -->
+            <ul class="footer-list">
+              <li>
+                <h3 class="h3 footer-item-title">Marketplace</h3>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Gaming</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Product</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">All NFTs</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Social Network</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Domain Names</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Collectibles</a>
+              </li>
+            </ul>
+
+            <!-- Explore links -->
+            <ul class="footer-list">
+              <li>
+                <h3 class="h3 footer-item-title">Explore</h3>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Featured Drops</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Live Auctions</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">All NFTs</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Collections</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Top Seller</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Items Details</a>
+              </li>
+            </ul>
+
+            <!-- Support links -->
+            <ul class="footer-list">
+              <li>
+                <h3 class="h3 footer-item-title">Supports</h3>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Settings & Privacy</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Help & Support</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Live Auctions</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Item Details</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">24/7 Supports</a>
+              </li>
+              <li class="footer-item">
+                <a href="#" class="footer-link">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom section of the footer -->
+      <div class="footer-bottom">
+        <div class="container">
+          <!-- Copyright -->
+          <p class="copyright">&copy; 2025 all rights reserved</p>
+
+          <!-- Bottom footer links -->
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section Ends -->
+
+    <!-- "Go to Top" Button -->
+    <a href="#top" class="go-top" data-go-top>
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </a>
+
+    <!-- Custom JavaScript File -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Ionicons Module Import (for modern browsers) -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- Ionicons Fallback (for older browsers) -->
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

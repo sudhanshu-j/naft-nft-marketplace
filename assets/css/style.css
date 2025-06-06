@@ -1,0 +1,1374 @@
+/* ========== CUSTOM PROPERTY ========== */
+
+:root {
+  /* Define reusable CSS custom properties (variables) for colors */
+  --jet: hsl(0, 0%, 20%); /* Dark gray */
+  --white: hsl(0, 0%, 100%); /* Pure white */
+  --black: hsl(0, 0%, 0%); /* Pure black */
+  --onyx-1: hsl(0, 0%, 24%); /* Dark gray shade */
+  --onyx-2: hsl(0, 0%, 25%); /* Slightly lighter dark gray */
+  --gray-web: hsl(0, 0%, 48%); /* Medium gray */
+  --light-gray: hsl(0, 0%, 80%); /* Light gray */
+  --davys-gray: hsl(0, 0%, 33%); /* Darkish gray */
+  --field-drab: hsl(47, 98%, 22%); /* Olive-ish dark yellow */
+  --red-crayola: hsl(356, 73%, 58%); /* Bright red */
+  --golden-puppy: hsl(47, 100%, 49%); /* Vibrant golden yellow */
+  --quick-silver: hsl(0, 0%, 63%); /* Medium light gray */
+  --sonic-silver: hsl(0, 0%, 44%); /* Dark gray */
+  --eerie-black-1: hsl(0, 0%, 15%); /* Very dark gray */
+  --eerie-black-2: hsl(0, 0%, 7%); /* Almost black */
+  --rich-black-fogra-39: hsl(0, 0%, 2%); /* Near pure black */
+
+  /* Font family */
+  --ff-roboto: "Roboto", sans-serif;
+
+  /* Font sizes (large to small) */
+  --fs-1: 32px;
+  --fs-2: 20px;
+  --fs-3: 19px;
+  --fs-4: 18px;
+  --fs-5: 16px;
+  --fs-6: 15px;
+  --fs-7: 14px;
+  --fs-8: 13px;
+  --fs-9: 12px;
+  --fs-10: 11px;
+
+  /* Font weights */
+  --fw-500: 500;
+  --fw-700: 700;
+
+  /* Default transition timing for interactive elements */
+  --transition: 0.15s ease-in-out;
+}
+
+/* ========== RESET ========== */
+
+/* Reset margin, padding, and box-sizing for all elements and their pseudo-elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border included in width/height */
+}
+
+/* Remove underline from all links */
+a {
+  text-decoration: none;
+}
+
+/* Remove bullets from list items */
+li {
+  list-style: none;
+}
+
+/* Reset button styles and make buttons inherit font styles */
+button {
+  color: inherit;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Make these elements block-level for layout control */
+button,
+img,
+input,
+a,
+span,
+ion-icon {
+  display: block;
+}
+
+/* Inputs inherit font and remove border */
+input {
+  font: inherit;
+  border: none;
+}
+
+/* Base font settings for html */
+html {
+  font-family: var(--ff-roboto); /* Use Roboto font */
+  color: var(--quick-silver); /* Base text color */
+  line-height: 1.3; /* Line spacing */
+  scroll-behavior: smooth; /* Smooth scrolling on anchor links */
+}
+
+/* Base body styles */
+body {
+  background: var(--rich-black-fogra-39); /* Very dark background */
+  min-width: 280px; /* Minimum width for responsive layout */
+}
+
+/* Accessibility: outline offset for focus on interactive elements */
+button,
+a,
+input,
+[tabindex] {
+  outline-offset: 4px;
+}
+
+/* Custom scrollbar styles for WebKit browsers */
+::-webkit-scrollbar {
+  width: 10px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--rich-black-fogra-39); /* Track background matches body */
+  border-left: 1px solid var(--onyx-1); /* Left border for styling */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--golden-puppy); /* Scrollbar thumb color */
+}
+
+/* Darker scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  --golden-puppy: hsl(47, 100%, 40%);
+}
+
+/* Scrollbar button height */
+::-webkit-scrollbar-button {
+  height: 5px;
+}
+
+/* ========== REUSED STYLE ========== */
+
+/* Container with horizontal padding */
+.container {
+  padding: 0 12px;
+}
+
+/* Headings color set to white */
+.h1,
+.h2,
+.h3 {
+  color: var(--white);
+}
+
+/* Heading 1 style */
+.h1 {
+  font-size: var(--fs-1);
+  text-transform: capitalize; /* Capitalize first letter of each word */
+}
+
+/* Heading 2 style */
+.h2 {
+  font-size: var(--fs-3);
+}
+
+/* Heading 3 style */
+.h3 {
+  font-size: var(--fs-2);
+}
+
+/* Heading 4 style - inherits color, heavier font */
+.h4 {
+  color: inherit;
+  font-size: var(--fs-5);
+  font-weight: var(--fw-700);
+}
+
+/* Heading 5 style - smaller font, medium weight */
+.h5 {
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+}
+
+/* Button base styles */
+.btn {
+  color: var(--white);
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+  text-transform: uppercase; /* Uppercase text */
+  min-width: 130px; /* Minimum width */
+  padding: 10px 15px; /* Padding inside button */
+  border: 1px solid var(--golden-puppy);
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Primary button style */
+.btn-primary {
+  background: var(--golden-puppy);
+  color: var(--black); /* Dark text on bright background */
+}
+
+/* Primary button hover and focus states */
+.btn-primary:is(:hover, :focus) {
+  --golden-puppy: hsl(47, 100%, 45%); /* Slightly darker golden */
+}
+
+/* Secondary button hover and focus states */
+.btn-secondary:is(:hover, :focus) {
+  background: hsla(47, 100%, 45%, 0.1); /* Transparent golden highlight */
+}
+
+/* ========== HEADER STYLE ========== */
+
+/* Header wrapper with padding and bottom border */
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--onyx-1);
+}
+
+/* Container inside header uses flexbox for spacing and alignment */
+header .container {
+  display: flex;
+  justify-content: space-between; /* Space between brand and nav */
+  align-items: center; /* Vertical centering */
+}
+
+/* Wrapper for nav, positioned relatively */
+.header-nav-wrapper {
+  position: relative;
+}
+
+/* Navbar styles: initially hidden, positioned absolutely */
+.navbar {
+  background: var(--onyx-1);
+  position: absolute;
+  top: calc(100% + 20px); /* Below header */
+  right: 0;
+  width: 250px;
+  padding: 15px;
+  border-radius: 8px;
+  transform: scale(0.8); /* Slightly shrunk initially */
+  transform-origin: top right;
+  opacity: 0; /* Hidden */
+  visibility: hidden;
+  pointer-events: none; /* Prevent interaction */
+  transition: var(--transition);
+}
+
+/* Navbar visible state: scaled to full size and visible */
+.navbar.active {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+/* Links inside navbar */
+.navbar-link {
+  background: transparent;
+  color: var(--white);
+  font-size: var(--fs-7);
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+/* Hover and focus state for navbar links */
+.navbar-link:is(:hover, :focus) {
+  background: var(--davys-gray);
+}
+
+/* Navbar toggle button style */
+.navbar-toggle-btn {
+  color: var(--white);
+  font-size: 30px;
+  padding: 5px;
+}
+
+/* Header action area hidden by default */
+.header-actions {
+  display: none;
+}
+
+/* ========== HERO STYLE ========== */
+
+/* Hero section padding */
+.hero {
+  padding: 60px 0;
+}
+
+/* Hero content centered text and margin bottom */
+.hero-content {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Hero main title margin */
+.hero-title {
+  margin-bottom: 15px;
+}
+
+/* Hero title span styled with text stroke */
+.hero-title > span {
+  display: inline-block;
+  -webkit-text-stroke-width: 1px; /* Outline width */
+  -webkit-text-stroke-color: var(--golden-puppy); /* Outline color */
+  -webkit-text-fill-color: transparent; /* Transparent fill for outlined effect */
+}
+
+/* Hero text style */
+.hero-text {
+  color: var(--white);
+  font-size: var(--fs-7);
+  margin-bottom: 20px;
+}
+
+/* Button group flex container with spacing */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+}
+
+/* Hero banner styles: circular border with overflow hidden */
+.hero-banner {
+  border: 20px solid var(--eerie-black-1);
+  border-radius: 50%; /* Circle shape */
+  overflow: hidden;
+}
+
+/* Hero banner image fills container and keeps aspect ratio */
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image covers the circle without distortion */
+}
+
+/* ========== NEW PRODUCT, EXPLORE PRODUCT STYLE ========== */
+
+/* Wrapper for new product section with dark background and vertical padding */
+.new-product {
+  background: var(--eerie-black-2);
+  padding: 60px 0;
+}
+
+/* Flex container for section header: space between items, centered alignment, gap, and margin below */
+.section-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Product list container using grid layout with a single column and gaps between items */
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+/* Individual product card styling: dark background, padding, border, and rounded corners */
+.product-card {
+  background: var(--eerie-black-1);
+  padding: 18px;
+  border: 1px solid var(--onyx-2);
+  border-radius: 8px;
+}
+
+/* Product image container with relative positioning, fixed height, rounded corners, overflow hidden, and margin below */
+.product-banner {
+  position: relative;
+  height: 210px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+/* Image inside product banner fills container and maintains aspect ratio */
+.product-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container for product action buttons inside banner, absolutely positioned and spaced */
+.product-actions {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styles for small circular buttons (menu and wishlist) with grid centering and rounded */
+.product-card-menu,
+.add-to-whishlist {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+/* Product card menu button styled with golden background and black icon/text */
+.product-card-menu {
+  background: var(--golden-puppy);
+  color: var(--black);
+}
+
+/* Wishlist button styled with dark background and white icon/text */
+.add-to-whishlist {
+  background: var(--eerie-black-1);
+  color: var(--white);
+}
+
+/* Active wishlist button changes icon/text color to bright red */
+.add-to-whishlist.active {
+  color: var(--red-crayola);
+}
+
+/* On hover/focus, wishlist button text color lightens */
+.add-to-whishlist:is(:hover, :focus) {
+  --white: hsl(0, 0%, 80%);
+}
+
+/* "Place bid" button inside product card: golden background, black text, absolutely centered, small padding, rounded corners, initially invisible */
+.place-bid-btn {
+  background: var(--golden-puppy);
+  color: var(--black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: var(--fs-7);
+  text-transform: capitalize;
+  padding: 8px 16px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+/* When product card is hovered/focused or button is focused, the "place bid" button moves up slightly and becomes visible */
+.product-card:is(:hover, :focus) .place-bid-btn,
+.place-bid-btn:focus {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* Product title spacing below */
+.product-title {
+  margin-bottom: 15px;
+}
+
+/* On hover/focus of product card, product title color changes to red */
+.product-card:is(:hover, :focus) .product-title {
+  color: var(--red-crayola);
+}
+
+/* Meta information container for product: flexbox with spaced items and margin below */
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Product author info: flex container aligning items left with gap */
+.product-author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Circular author image container with black background and hidden overflow */
+.author-img {
+  background: var(--black);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Author username and product price label inherit color and have smaller font size */
+.author-username,
+.product-price .label {
+  color: inherit;
+  font-size: var(--fs-8);
+}
+
+/* Author username changes color to golden on hover/focus */
+.author-username:is(:hover, :focus) {
+  color: var(--golden-puppy);
+}
+
+/* Product price data styled with larger font and bold */
+.product-price data {
+  font-size: var(--fs-6);
+  font-weight: var(--fw-700);
+}
+
+/* Footer section of product card: flex container with spaced items, aligned vertically, smaller font */
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-8);
+}
+
+/* Tag styling: golden background, black text, small padding, and rounded corners */
+.tag {
+  background: var(--golden-puppy);
+  color: var(--black);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* ========== ABOUT STYLE ========== */
+
+/* About section vertical padding */
+.about {
+  padding: 60px 0;
+}
+
+/* About section title centered with margin below */
+.about-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* About list uses grid with one column, gap between items, and horizontal margin */
+.about-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin: 0 10px;
+}
+
+/* Individual about items with dark background, padding, and rounded corners */
+.about-item {
+  background: var(--eerie-black-2);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* About card styling: relative positioning, padding, border with light gray, rounded corners, and center aligned text */
+.about-card {
+  position: relative;
+  padding: 30px 10px 20px;
+  border: 1px solid var(--onyx-1);
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Before and after pseudo-elements on about card for decorative corner lines */
+.about-card::before,
+.about-card::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: var(--sonic-silver);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+/* Vertical decorative line before pseudo-element */
+.about-card::before {
+  width: 3px;
+  height: 100px;
+}
+
+/* Horizontal decorative line after pseudo-element */
+.about-card::after {
+  width: 100px;
+  height: 3px;
+}
+
+/* On hover of about item, change decorative lines to golden */
+.about-item:hover .about-card::before,
+.about-item:hover .about-card::after {
+  background: var(--golden-puppy);
+}
+
+/* Card number badge positioned absolutely with background, color, padding, font size/weight, rounded top-left corner, and a thick border */
+.about-card .card-number {
+  position: absolute;
+  background: var(--eerie-black-1);
+  color: var(--onyx-2);
+  top: -15px;
+  left: -15px;
+  padding: 5px 15px;
+  font-size: 24px;
+  font-weight: var(--fw-700);
+  border-top-left-radius: 18px;
+  border: 14px solid var(--eerie-black-2);
+}
+
+/* Card icon container centered with margin below */
+.card-icon {
+  width: max-content;
+  margin-inline: auto;
+  margin-bottom: 30px;
+}
+
+/* About card title margin below and smooth transition for color */
+.about-card-title {
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+/* On hover of about item, card title color changes to golden */
+.about-item:hover .about-card-title {
+  color: var(--golden-puppy);
+}
+
+/* About card text with smaller font size and line height for readability */
+.about-card-text {
+  font-size: var(--fs-7);
+  line-height: 1.5;
+}
+
+/* ========== TOP SELLER STYLE ========== */
+
+/* Top seller section vertical padding */
+.top-seller {
+  padding: 60px 0;
+}
+
+/* Top seller section title: flex container aligned left, centered vertically, with bottom margin and small gap */
+.top-seller-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 5px;
+}
+
+/* Span inside title colored golden */
+.top-seller-title span {
+  color: var(--golden-puppy);
+}
+
+/* Ion icon inside title has left margin to separate from text */
+.top-seller-title ion-icon {
+  margin-left: 10px;
+}
+
+/* List of top sellers using grid with single column and gaps */
+.top-seller-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+/* Each top seller item with dark background, padding, and rounded corners */
+.top-seller-item {
+  background: var(--eerie-black-2);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Card inside top seller item: relative positioning, padding, flex container aligning items left with gap, border, and rounded corners */
+.top-seller-card {
+  position: relative;
+  padding: 13px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid var(--onyx-2);
+  border-radius: 4px;
+}
+
+/* Decorative before and after pseudo-elements for bottom-right corner accents */
+.top-seller-card::before,
+.top-seller-card::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  background: var(--sonic-silver);
+  transition: var(--transition);
+}
+
+/* Vertical line for before pseudo-element */
+.top-seller-card::before {
+  width: 2px;
+  height: 37px;
+}
+
+/* Horizontal line for after pseudo-element */
+.top-seller-card::after {
+  width: 37px;
+  height: 2px;
+}
+
+/* On hover, change decorative corner lines color to golden */
+.top-seller-card:hover::before,
+.top-seller-card:hover::after {
+  background: var(--golden-puppy);
+}
+
+/* Card number badge in top seller: absolutely positioned top-right, with background, font size/weight, color, padding, rounded corner, and border */
+.top-seller .card-number {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--eerie-black-1);
+  font-size: var(--fs-10);
+  font-weight: var(--fw-700);
+  color: var(--onyx-2);
+  padding: 5px 10px;
+  border-top-right-radius: 10px;
+  border: 7px solid var(--eerie-black-2);
+}
+
+/* Circular avatar container with black background and relative positioning */
+.card-avatar {
+  position: relative;
+  background: var(--black);
+  border-radius: 50%;
+}
+
+/* Small circular badge on avatar positioned bottom-right with golden background */
+.avatar-badge {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  background: var(--golden-puppy);
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ion icon inside avatar badge has increased stroke width */
+.avatar-badge ion-icon {
+  --ionicon-stroke-width: 70px;
+}
+
+/* Card title text colored quick silver with smooth transition */
+.top-seller .card-title {
+  color: var(--quick-silver);
+  transition: var(--transition);
+}
+
+/* On hover of top seller card, change title color to golden */
+.top-seller-card:hover .card-title {
+  color: var(--golden-puppy);
+}
+
+/* Data inside card content colored quick silver with small font size */
+.top-seller .card-content data {
+  color: var(--quick-silver);
+  font-size: var(--fs-10);
+}
+
+/* ========== FOOTER STYLE ========== */
+
+/* Top part of footer with dark background and vertical padding */
+.footer-top {
+  background: var(--eerie-black-2);
+  padding: 60px 0;
+}
+
+/* Logo inside footer with bottom margin */
+.footer-top .logo {
+  margin-bottom: 25px;
+}
+
+/* Footer brand section margin bottom */
+.footer-brand {
+  margin-bottom: 40px;
+}
+
+/* Footer brand text is hidden */
+.footer-brand-text {
+  display: none;
+}
+
+/* Social media section title with white color, font size, and bottom margin */
+.social-title {
+  color: var(--white);
+  font-size: var(--fs-4);
+  margin-bottom: 25px;
+}
+
+/* Social media icons container: flex layout, items aligned left and centered vertically with gap */
+.social-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Individual social link button: dark background, quick silver color, padding, large font size, circular, with smooth transition */
+.social-link {
+  background: var(--eerie-black-1);
+  color: var(--quick-silver);
+  padding: 9px;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+/* On hover, social link color changes to golden */
+.social-link:hover {
+  color: var(--golden-puppy);
+}
+
+/* Container for footer links using grid with single column and gap */
+.footer-link-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+/* Footer item titles have medium font weight and bottom margin */
+.footer-item-title {
+  font-weight: var(--fw-500);
+  margin-bottom: 10px;
+}
+
+/* Footer item container with relative positioning and smooth transition */
+.footer-item {
+  position: relative;
+  transition: var(--transition);
+}
+
+/* Before pseudo-element adds a small circle bullet on left side of footer item */
+.footer-item::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--quick-silver);
+  border-radius: 50%;
+  border: 2px solid var(--sonic-silver);
+  transition: var(--transition);
+}
+
+/* On hover, bullet color changes to golden and border color changes to field drab */
+.footer-item:hover::before {
+  background: var(--golden-puppy);
+  border-color: var(--field-drab);
+}
+
+/* Footer link styling: quick silver color, smaller font size, bottom margin, left padding, smooth transition */
+.footer-link {
+  color: var(--quick-silver);
+  font-size: var(--fs-7);
+  margin-bottom: 8px;
+  padding-left: 15px;
+  transition: var(--transition);
+}
+
+/* On hover of footer item, change link color to golden */
+.footer-item:hover .footer-link {
+  color: var(--golden-puppy);
+}
+
+/* On hover, bullet and link translate right by 10px */
+.footer-item:hover::before,
+.footer-item:hover .footer-link {
+  transform: translateX(10px);
+}
+
+/* Bottom footer area with dark background, vertical padding, and text colored quick silver */
+.footer-bottom {
+  background: var(--eerie-black-1);
+  padding: 25px 0;
+  color: var(--quick-silver);
+}
+
+/* Copyright text styling: smaller font, horizontal padding, centered, and bottom margin */
+.copyright {
+  font-size: var(--fs-7);
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Links inside copyright styled as inline block with white color */
+.copyright > a {
+  display: inline-block;
+  color: var(--white);
+}
+
+/* On hover, copyright links change color to golden */
+.copyright > a:hover {
+  color: var(--golden-puppy);
+}
+
+/* Container for footer bottom links: flex with wrapping, centered alignment and justification, gap between links, and horizontal padding */
+.footer-bottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+/* Links in footer bottom: quick silver color, small font size, smooth transition */
+.footer-bottom-links a {
+  color: var(--quick-silver);
+  font-size: var(--fs-7);
+  transition: var(--transition);
+}
+
+/* On hover, footer bottom links change color to golden */
+.footer-bottom-links a:hover {
+  color: var(--golden-puppy);
+}
+
+/* ========== GO TO TOP STYLE ========== */
+
+/* "Go to top" button styling: golden text on dark background, fixed position bottom-right corner, square with rounded corners, centered icon, box shadow, hidden by default with zero opacity and no pointer events, smooth opacity transition */
+.go-top {
+  background: var(--eerie-black-1);
+  color: var(--golden-puppy);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in-out;
+}
+
+/* When active, "go to top" button becomes visible and interactive */
+.go-top.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+/* On hover, dark background slightly lightens */
+.go-top:hover {
+  --eerie-black-1: hsl(0, 0%, 20%);
+}
+
+/* ========== MEDIA QUERIES STYLE ========== */
+
+/**
+ * responsive for larger than 450px screen
+ */
+@media (min-width: 450px) {
+  /* ========== REUSED STYLE ========== */
+
+  /* Container max width set to 400px and centered horizontally */
+  .container {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  /* ========== FOOTER STYLE ========== */
+
+  /* Footer link box grid layout changes to 2 columns */
+  .footer-link-box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/** responsive for larger than 650px screen */
+@media (min-width: 650px) {
+  /* ========== REUSED STYLE ========== */
+
+  /* Container max width increased to 600px */
+  .container {
+    max-width: 600px;
+  }
+
+  /* ========== HERO STYLE ========== */
+
+  /* Hero section's container max width limited to 450px */
+  .hero .container {
+    max-width: 450px;
+  }
+
+  /* ========== NEW PRODUCT, ABOUT, EXPLORE PRODUCT, TOP SELLER STYLE ========== */
+
+  /* Product list, About list, and Top seller list use grid with 2 columns */
+  .product-list,
+  .about-list,
+  .top-seller-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* ========== FOOTER STYLE ========== */
+
+  /* Footer brand text centered */
+  .footer-brand {
+    text-align: center;
+  }
+
+  /* Footer logo width shrinks to content size and horizontally centered */
+  .footer-top .logo {
+    width: max-content;
+    margin-inline: auto;
+  }
+
+  /* Footer brand text shown (display block), font size set, max width restricted, and centered with bottom margin */
+  .footer-brand-text {
+    display: block;
+    font-size: var(--fs-7);
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+
+  /* Social icons list center aligned */
+  .social-list {
+    justify-content: center;
+  }
+
+  /* Footer link box grid changes to 3 equal columns */
+  .footer-link-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Footer item title font size adjusted and bottom margin increased */
+  .footer-item-title {
+    --fs-2: 22px; /* Note: This seems to be a variable assignment inside a selector, likely ineffective unless used with CSS variables */
+    margin-bottom: 30px;
+  }
+
+  /* Footer bottom container displays as flex, items spaced between horizontally and vertically centered */
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Remove bottom margin for copyright text */
+  .copyright {
+    margin-bottom: 0;
+  }
+}
+
+/** responsive for larger than 768px screen */
+@media (min-width: 768px) {
+  /* ========== CUSTOM PROPERTY ========== */
+
+  /* Redefine font size variables for larger screens */
+  :root {
+    --fs-1: 38px; /* Large heading font size */
+    --fs-3: 35px; /* Medium-large heading font size */
+    --fs-7: 15px; /* Smaller body text font size */
+    --fs-9: 14px; /* Smallest body text font size */
+  }
+
+  /* ========== REUSED STYLE ========== */
+
+  /* Container max width increased */
+  .container {
+    max-width: 700px;
+  }
+
+  /* Buttons get bigger padding for easier clicking */
+  .btn {
+    padding: 14px 20px;
+  }
+
+  /* ========== HERO STYLE ========== */
+
+  /* More vertical padding for hero section */
+  .hero {
+    padding: 100px 0;
+  }
+
+  /* Hero container uses grid with two columns for layout */
+  .hero .container {
+    min-height: 70vh; /* Minimum height 70% of viewport height */
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    place-items: center; /* Center items vertically and horizontally */
+    gap: 25px; /* Space between grid items */
+  }
+
+  /* Align hero text content to the left and remove bottom margin */
+  .hero-content {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  /* Button group aligned to start (left) */
+  .btn-group {
+    justify-content: flex-start;
+  }
+
+  /* ========== NEW PRODUCT, ABOUT, EXPLORE PRODUCT, TOP SELLER STYLE ========== */
+
+  /* Sections get larger vertical padding */
+  .new-product,
+  .about,
+  .explore-product,
+  .top-seller,
+  .footer-top {
+    padding: 100px 0;
+  }
+
+  /* Larger bottom margins for section headers */
+  .section-header-wrapper,
+  .about-title,
+  .top-seller-title {
+    margin-bottom: 60px;
+  }
+
+  /* ========== GO TO TOP STYLE ========== */
+
+  /* Increase size of go-top button */
+  .go-top {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+}
+
+/** responsive for larger than 1024px screen */
+@media (min-width: 1024px) {
+  /* ========== CUSTOM PROPERTY ========== */
+
+  /* Adjust font sizes for larger desktop screens */
+  :root {
+    /**
+     * typography
+     */
+    --fs-1: 45px; /* Larger heading font size */
+    --fs-9: 16px; /* Slightly larger small text */
+  }
+
+  /* ========== REUSED STYLE ========== */
+
+  /* Container max width expanded */
+  .container {
+    max-width: 950px;
+  }
+
+  /* ========== HEADER STYLE ========== */
+
+  /* Header right side layout uses flexbox, centered alignment, and spacing */
+  .header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between header items */
+  }
+
+  /* Header actions container uses flexbox with spacing */
+  .header-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Search field styling for background, color, padding, border and rounding */
+  .search-field {
+    background: var(--eerie-black-1);
+    color: var(--gray-web);
+    padding: 0 15px;
+    border: 1px solid var(--onyx-1);
+    border-radius: 4px;
+  }
+
+  /* ========== HERO STYLE ========== */
+
+  /* Hero container max width increased and smaller gap */
+  .hero .container {
+    max-width: 950px;
+    gap: 20px;
+  }
+
+  /* Bottom margins for hero title and text */
+  .hero-title,
+  .hero-text {
+    margin-bottom: 30px;
+  }
+
+  /* Override smaller font size variable for hero text */
+  .hero-text {
+    --fs-7: 18px;
+  }
+
+  /* Increase gap between buttons */
+  .btn-group {
+    gap: 20px;
+  }
+
+  /* ========== NEW PRODUCT, ABOUT, EXPLORE PRODUCT, TOP SELLER STYLE ========== */
+
+  /* Change product, about, and top seller lists to 3 columns grid */
+  .product-list,
+  .about-list,
+  .top-seller-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ========== FOOTER STYLE ========== */
+
+  /* Footer top container uses flexbox with spacing and alignment */
+  .footer-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  /* Footer brand text constraints and alignment */
+  .footer-brand {
+    max-width: 280px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  /* Remove horizontal margin for footer logo and brand text */
+  .footer-top .logo,
+  .footer-brand-text {
+    margin-inline: 0;
+  }
+
+  /* Align social icons to start */
+  .social-list {
+    justify-content: flex-start;
+  }
+
+  /* Increase spacing between footer link boxes */
+  .footer-link-box {
+    gap: 60px;
+  }
+
+  /* Footer item title font size variable adjusted and bottom margin */
+  .footer-item-title {
+    --fs-2: 25px; /* Again, looks like a variable declaration, but likely ineffective here */
+    margin-bottom: 30px;
+  }
+}
+
+/** responsive for larger than 1200px screen */
+@media (min-width: 1200px) {
+  /* ========== CUSTOM PROPERTY ========== */
+
+  /* Define root-level CSS variables for typography */
+  :root {
+    --fs-1: 55px; /* Large heading font size increased for very large screens */
+  }
+
+  /* ========== REUSED STYLE ========== */
+
+  /* Increase max container width for wide screens */
+  .container {
+    max-width: 1150px;
+  }
+
+  /* ========== HEADER STYLE ========== */
+
+  /* Make header right section and nav wrapper flexible to fill available space */
+  .header-right,
+  .header-nav-wrapper {
+    flex-grow: 1;
+  }
+
+  /* Hide the navbar toggle button (usually hamburger menu) on large screens */
+  .navbar-toggle-btn {
+    display: none;
+  }
+
+  /* Make navbar fully visible and interactive on large screens */
+  .navbar {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Visible */
+    pointer-events: all; /* Clickable/interactable */
+    transform: scale(1); /* Reset any scaling */
+    position: static; /* Normal document flow */
+    background: none; /* Remove any background */
+    width: 100%; /* Full width */
+    padding: 0; /* Remove padding */
+  }
+
+  /* Display navbar list horizontally using flexbox, centered alignment */
+  .navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Set navbar links as relative positioned (for pseudo elements) */
+  .navbar-link {
+    position: relative;
+  }
+
+  /* On hover or focus, remove background and change text color to red */
+  .navbar-link:is(:hover, :focus) {
+    background: none;
+    color: var(--red-crayola);
+  }
+
+  /* Add a decorative underline effect below navbar links using ::after */
+  .navbar-link::after {
+    --scaleY: scaleY(0); /* Initially scaled down vertically (hidden) */
+
+    content: ""; /* Empty content for pseudo element */
+    position: absolute; /* Positioned relative to navbar-link */
+    bottom: 0; /* Positioned at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%) var(--scaleY); /* Center and scale vertically */
+    transform-origin: bottom; /* Scale from bottom upwards */
+    width: 2px; /* Thin vertical line */
+    height: 10px; /* Height of the line */
+    background: linear-gradient(
+      to top,
+      var(--red-crayola),
+      transparent
+    ); /* Gradient color */
+    transition: var(--transition); /* Smooth transition for transform */
+  }
+
+  /* On hover or focus, scale the underline vertically to make it visible */
+  .navbar-link:hover::after,
+  .navbar-link:focus::after {
+    --scaleY: scaleY(1);
+  }
+
+  /* ========== HERO STYLE ========== */
+
+  /* Increase max width and gap between grid items in hero container */
+  .hero .container {
+    max-width: 1150px;
+    gap: 50px; /* More spacing between hero columns */
+  }
+
+  /* Increase bottom margin for hero title and text */
+  .hero-title,
+  .hero-text {
+    margin-bottom: 35px;
+  }
+
+  /* ========== NEW PRODUCT, ABOUT, EXPLORE PRODUCT, TOP SELLER STYLE ========== */
+
+  /* Use a 4-column grid for product, about, and top seller lists */
+  .product-list,
+  .about-list,
+  .top-seller-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* ========== ABOUT STYLE ========== */
+
+  /* Arrange about cards as vertical flex containers spaced evenly */
+  .about-card {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    height: 100%; /* Full height of container */
+    justify-content: space-between; /* Space items evenly with space between */
+    align-items: center; /* Center items horizontally */
+  }
+
+  /* ========== FOOTER STYLE ========== */
+
+  /* Set a minimum width for footer lists for consistent layout */
+  .footer-list {
+    min-width: 180px;
+  }
+}
